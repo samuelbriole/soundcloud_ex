@@ -18,11 +18,14 @@ defmodule SoundcloudEx.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:httpoison]]
   end
 
   defp deps do
-    []
+    [
+      { :httpoison, "~> 0.8.0" },
+      { :poison, "~> 2.0" }
+    ]
   end
 
   defp package do
