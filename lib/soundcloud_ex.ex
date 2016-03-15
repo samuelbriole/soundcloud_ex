@@ -10,8 +10,14 @@ defmodule SoundcloudEx do
     |> parse_response
   end
 
-  def url_for(path, %Client{endpoint: endpoint}) do
-    endpoint <> path
+  def post(path, client, params \\ []) do
+    url_for(path, client)
+    |> post!({:form, params})
+    |> parse_response
+  end
+
+  def url_for(path, client) do
+    client.endpoint <> path
   end
 
   def add_params_to_url(url, params \\ %{}) do
