@@ -1,6 +1,6 @@
 # SoundcloudEx
 
-**TODO: Add description**
+SoundCloud api wrapper for Elixir. It provides simple HTTP authentication methods and client for api calls.
 
 ## Installation
 
@@ -12,8 +12,31 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [{:soundcloud_ex, "~> 0.0.1"}]
         end
 
-  2. Ensure soundcloud_ex is started before your application:
+##Examples
+###OAuth2 authorization code flow
+```elixir
+client = SoundcloudEx.Client.new(%{
+  client_id: YOUR_CLIENT_ID,
+  client_secret: YOUR_CLIENT_SECRET,
+  redirect_uri: YOUR_REDIRECT_URI
+})
+auth_url = SoundcloudEx.Auth.authorization_url(client)
 
-        def application do
-          [applications: [:soundcloud_ex]]
-        end
+# Once you've redirected the user to `auth_url`, the user will complete the authentication
+# on the SoundCloud login page. After that, SoundCloud will redirect the user to the
+# `REDIRECT_URI` you've set. That's where you'll exchange the code passed via query string
+# by SoundCloud with a fully-fledged access token.
+
+SoundcloudEx.Auth.exchange_token(client, params["code"])
+```
+
+### OAuth2 refresh token
+```elixir
+client = SoundcloudEx.Client.new(%{
+  client_id: YOUR_CLIENT_ID,
+  client_secret: YOUR_CLIENT_SECRET
+})
+
+SoundcloudEx.Auth.refresh_token(client, YOUR_REFRESH_TOKEN) # A new fully-fledged access token.
+```
+
