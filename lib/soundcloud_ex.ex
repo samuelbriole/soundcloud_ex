@@ -32,8 +32,8 @@ defmodule SoundcloudEx do
     to_string('?' ++ URI.encode_query(params))
   end
 
-  def parse_response(response) do
-    response.body
-    |> Poison.decode!
-  end
+  def parse_response(%HTTPoison.Response{status_code: 200, body: ""}), do: nil
+  def parse_response(%HTTPoison.Response{status_code: 200, body: body}), do: Poison.decode!(body)
+  def parse_response(%HTTPoison.Response{status_code: status_code, body: ""}), do: { status_code, nil }
+  def parse_response(%HTTPoison.Response{status_code: status_code, body: body }), do: { status_code, Poison.decode!(body) }
 end

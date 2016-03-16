@@ -24,4 +24,14 @@ defmodule SoundcloudEx.Auth do
         client_secret: client.client_secret
       ])
   end
+
+  def refresh_token(client, refresh_token) do
+    @token_path
+    |> post(client, [
+        client_id: client.client_id,
+        client_secret: client.client_secret,
+        grant_type: "refresh_token",
+        refresh_token: refresh_token,
+      ])
+  end
 end
