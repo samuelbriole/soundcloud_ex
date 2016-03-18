@@ -1,6 +1,5 @@
 defmodule SoundcloudEx.Auth do
   import SoundcloudEx
-  alias SoundcloudEx.Client
 
   @auth_path "/connect"
   @token_path "/oauth2/token"

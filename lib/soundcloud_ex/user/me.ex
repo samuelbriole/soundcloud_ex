@@ -1,0 +1,29 @@
+defmodule SoundcloudEx.User.Me do
+  defstruct [
+    :id,
+    :permalink,
+    :username,
+    :uri,
+    :permalink_url,
+    :avatar_url,
+    :country,
+    :full_name,
+    :city,
+    :description,
+    :discogs,
+    :myspace,
+    :website,
+    :website,
+    :online,
+    :track_count,
+    :playlist_count,
+    :followers_count,
+    :followings_count,
+    :public_favorites_count,
+    :avatar_data,
+    :plan,
+    :private_tracks_count,
+    :private_playlists_count,
+    :primary_email_confirmed
+  ]
+end

@@ -24,8 +24,11 @@ defmodule SoundcloudEx do
     <<url :: binary, "&", URI.encode_query(params) :: binary>>
   end
 
-  def add_mandatory_params_to_url(url, %Client{client_id: client_id}) do
+  def add_mandatory_params_to_url(url, %Client{oauth_token: nil, client_id: client_id}) do
     <<url :: binary, start_query_string(%{"client_id": client_id}) :: binary>>
+  end
+  def add_mandatory_params_to_url(url, %Client{oauth_token: oauth_token, client_id: nil}) do
+    <<url :: binary, start_query_string(%{"oauth_token": oauth_token}) :: binary>>
   end
 
   defp start_query_string(params) do
@@ -33,7 +36,7 @@ defmodule SoundcloudEx do
   end
 
   def parse_response(%HTTPoison.Response{status_code: 200, body: ""}), do: nil
-  def parse_response(%HTTPoison.Response{status_code: 200, body: body}), do: Poison.decode!(body)
+  def parse_response(%HTTPoison.Response{status_code: 200, body: body}), do: body
   def parse_response(%HTTPoison.Response{status_code: status_code, body: ""}), do: { status_code, nil }
-  def parse_response(%HTTPoison.Response{status_code: status_code, body: body }), do: { status_code, Poison.decode!(body) }
+  def parse_response(%HTTPoison.Response{status_code: status_code, body: body }), do: { status_code, body }
 end
