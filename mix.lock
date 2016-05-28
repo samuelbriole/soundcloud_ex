@@ -1,7 +1,7 @@
-%{"certifi": {:hex, :certifi, "0.3.0"},
-  "hackney": {:hex, :hackney, "1.4.10"},
-  "httpoison": {:hex, :httpoison, "0.8.1"},
-  "idna": {:hex, :idna, "1.1.0"},
-  "mimerl": {:hex, :mimerl, "1.0.2"},
-  "poison": {:hex, :poison, "1.5.2"},
-  "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
+%{"certifi": {:hex, :certifi, "0.3.0", "389d4b126a47895fe96d65fcf8681f4d09eca1153dc2243ed6babad0aac1e763", [:rebar3], []},
+  "hackney": {:hex, :hackney, "1.4.10", "7da877a7388a8bcc7d71253d4a38103c955333dd470a3af5e47fa1ad8d5e3c23", [:rebar3], [{:ssl_verify_hostname, "1.0.5", [hex: :ssl_verify_hostname, optional: false]}, {:mimerl, "1.0.2", [hex: :mimerl, optional: false]}, {:idna, "1.1.0", [hex: :idna, optional: false]}, {:certifi, "0.3.0", [hex: :certifi, optional: false]}]},
+  "httpoison": {:hex, :httpoison, "0.8.1", "5b706be2b0af81d1a3870479a2e1b925517c2a64316f70c6cc8aceac9e55f695", [:mix], [{:hackney, "~> 1.4.4", [hex: :hackney, optional: false]}]},
+  "idna": {:hex, :idna, "1.1.0", "b4315c6da1c37dc8ab1df3ed18796ecd5172c4165fb886f43732ce598d145b50", [:rebar3], []},
+  "mimerl": {:hex, :mimerl, "1.0.2", "993f9b0e084083405ed8252b99460c4f0563e41729ab42d9074fd5e52439be88", [:rebar3], []},
+  "poison": {:hex, :poison, "2.1.0", "f583218ced822675e484648fa26c933d621373f01c6c76bd00005d7bd4b82e27", [:mix], []},
+  "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5", "2e73e068cd6393526f9fa6d399353d7c9477d6886ba005f323b592d389fb47be", [:make], []}}
