@@ -1,7 +1,4 @@
-defmodule SoundcloudEx.User.Playlist do
-  import SoundcloudEx
-  alias SoundcloudEx.Playlist
-
+defmodule SoundcloudEx.Playlist do
   defstruct [
     :id,
     :created_at,
@@ -30,10 +27,5 @@ defmodule SoundcloudEx.User.Playlist do
     :downloadable,
     :ean,
     :playlist_type
-]
-
-  def all(user_id, client) do
-    get("/users/#{user_id}/playlists", client)
-    |> Poison.decode!(as: [%Playlist{}])
-  end
+  ]
 end

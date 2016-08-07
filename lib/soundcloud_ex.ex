@@ -13,6 +13,19 @@ defmodule SoundcloudEx do
   def post(path, client, params \\ []) do
     url_for(path, client)
     |> post!({:form, params})
+  end
+
+  def put(path, client) do
+    url_for(path, client)
+    |> add_mandatory_params_to_url(client)
+    |> put!("")
+    |> parse_response
+  end
+
+  def delete(path, client) do
+    url_for(path, client)
+    |> add_mandatory_params_to_url(client)
+    |> delete!
     |> parse_response
   end
 
@@ -21,7 +34,30 @@ defmodule SoundcloudEx do
   end
 
   def add_params_to_url(url, params \\ %{}) do
-    <<url :: binary, "&", URI.encode_query(params) :: binary>>
+    IO.puts encode_params(params)
+    <<url :: binary, "&", encode_params(params) :: binary>>
+  end
+
+  def encode_params(input, namespace) do
+    Enum.map(input, fn({key, value}) -> encode_param("#{namespace}[#{key}]", value) end)
+    |> Enum.join("&")
+  end
+
+  def encode_params(input) do
+    Enum.map(input, fn({key, value}) -> encode_param(key, value) end)
+    |> Enum.join("&")
+  end
+
+  defp encode_param(key, value) when is_map(value) do
+    encode_params(value, key)
+  end
+
+  defp encode_param(key, value) when is_list(value) do
+    encode_param(key, Enum.map(value, fn(tag) -> URI.encode(tag) end) |> Enum.join(","))
+  end
+
+  defp encode_param(key, value) do
+    "#{key}=#{value}"
   end
 
   def add_mandatory_params_to_url(url, %Client{oauth_token: nil, client_id: client_id}) do
@@ -37,6 +73,9 @@ defmodule SoundcloudEx do
 
   def parse_response(%HTTPoison.Response{status_code: 200, body: ""}), do: nil
   def parse_response(%HTTPoison.Response{status_code: 200, body: body}), do: body
+  def parse_response(%HTTPoison.Response{status_code: 201, body: body}), do: body
+  def parse_response(%HTTPoison.Response{status_code: 303, body: body}), do: body
+  def parse_response(%HTTPoison.Response{status_code: 404, body: body}), do: raise SoundcloudEx.NotFoundError
   def parse_response(%HTTPoison.Response{status_code: status_code, body: ""}), do: { status_code, nil }
   def parse_response(%HTTPoison.Response{status_code: status_code, body: body }), do: { status_code, body }
 end
