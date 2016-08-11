@@ -13,7 +13,9 @@ defmodule SoundcloudEx.Mixfile do
       name: "SoundCloudEx",
       description: @description,
       package: package,
-      deps: deps
+      deps: deps,
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test]
     ]
   end
 
@@ -24,7 +26,9 @@ defmodule SoundcloudEx.Mixfile do
   defp deps do
     [
       { :httpoison, "~> 0.8.0" },
-      { :poison, "~> 2.0" }
+      { :poison, "~> 2.0" },
+      { :excoveralls, "~> 0.4", only: :test },
+      { :exvcr, "~> 0.7", only: :test }
     ]
   end
 

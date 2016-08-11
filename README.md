@@ -1,4 +1,4 @@
-# SoundcloudEx
+# SoundcloudEx [![Build Status](https://travis-ci.org/desmondhume/soundcloud_ex.svg?branch=master)](https://travis-ci.org/desmondhume/soundcloud_ex) [![Coverage Status](https://coveralls.io/repos/github/desmondhume/soundcloud_ex/badge.svg?branch=master)](https://coveralls.io/github/desmondhume/soundcloud_ex?branch=master)
 
 SoundCloud api wrapper for Elixir. It provides simple HTTP authentication methods and client for api calls.
 

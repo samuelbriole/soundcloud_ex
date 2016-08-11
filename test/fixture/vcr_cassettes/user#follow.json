@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "put",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.soundcloud.com/me/followings/2976616?oauth_token=MY_AUTH_TOKEN"
+    },
+    "response": {
+      "body": "{\"first_name\":\"\",\"last_name\":\"\",\"full_name\":\"\",\"city\":\"Sydney\",\"description\":\"- Bookings Aus/NZ: booking [at] futureclassic [dot] com [dot] au\\r\\n- Bookings USA/Canada:  latane [at] windishagency [dot] com / steve [at] windishagency [dot] com\\r\\n- Bookings Europe & UK: tom [at] codaagency [dot] com\\r\\n- Press: claire [at] bossymusic [dot] com [dot] au\\r\\n- Management: mgmt [at] futureclassic [dot] com [dot] au\",\"country\":\"Australia\",\"track_count\":207,\"public_favorites_count\":0,\"followers_count\":1979805,\"followings_count\":186,\"plan\":\"Pro Unlimited\",\"myspace_name\":null,\"discogs_name\":null,\"website_title\":\"FLU.ME\",\"website\":\"http://flu.me\",\"reposts_count\":54,\"comments_count\":27,\"online\":false,\"likes_count\":0,\"playlist_count\":4,\"avatar_url\":\"https://i1.sndcdn.com/avatars-000199857182-bmbgeg-large.jpg\",\"id\":2976616,\"kind\":\"user\",\"permalink_url\":\"http://soundcloud.com/flume\",\"uri\":\"https://api.soundcloud.com/users/2976616\",\"username\":\"Flume\",\"permalink\":\"flume\",\"last_modified\":\"2016/05/31 04:48:02 +0000\"}",
+      "headers": {
+        "Access-Control-Allow-Headers": "Accept, Authorization, Content-Type, Origin",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Date",
+        "Cache-Control": "private, max-age=0, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Thu, 11 Aug 2016 10:18:14 GMT",
+        "Server": "am/2",
+        "Content-Length": "1014"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

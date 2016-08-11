@@ -28,7 +28,7 @@ defmodule SoundcloudEx.User do
 
   def me(client) do
     get("/me", client)
-    |> Poison.decode!(as: Me)
+    |> Poison.decode!(as: %Me{})
   end
 
   def find(user_id, client) do

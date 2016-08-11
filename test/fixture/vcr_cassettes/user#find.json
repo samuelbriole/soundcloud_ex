@@ -1,0 +1,31 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.soundcloud.com/users/2976616?client_id=MY_CLIENT_ID&"
+    },
+    "response": {
+      "body": "{\"id\":2976616,\"kind\":\"user\",\"permalink\":\"flume\",\"username\":\"Flume\",\"last_modified\":\"2016/05/31 04:48:02 +0000\",\"uri\":\"https://api.soundcloud.com/users/2976616\",\"permalink_url\":\"http://soundcloud.com/flume\",\"avatar_url\":\"https://i1.sndcdn.com/avatars-000199857182-bmbgeg-large.jpg\",\"country\":\"Australia\",\"first_name\":\"\",\"last_name\":\"\",\"full_name\":\"\",\"description\":\"- Bookings Aus/NZ: booking [at] futureclassic [dot] com [dot] au\\r\\n- Bookings USA/Canada:  latane [at] windishagency [dot] com / steve [at] windishagency [dot] com\\r\\n- Bookings Europe & UK: tom [at] codaagency [dot] com\\r\\n- Press: claire [at] bossymusic [dot] com [dot] au\\r\\n- Management: mgmt [at] futureclassic [dot] com [dot] au\",\"city\":\"Sydney\",\"discogs_name\":null,\"myspace_name\":null,\"website\":\"http://flu.me\",\"website_title\":\"FLU.ME\",\"online\":false,\"track_count\":54,\"playlist_count\":4,\"plan\":\"Pro Plus\",\"public_favorites_count\":33,\"subscriptions\":[{\"product\":{\"id\":\"creator-pro-unlimited\",\"name\":\"Pro Unlimited\"}}],\"followers_count\":1979804,\"followings_count\":186}",
+      "headers": {
+        "Access-Control-Allow-Headers": "Accept, Authorization, Content-Type, Origin",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Date",
+        "Cache-Control": "max-age=600, public",
+        "Content-Type": "application/xml; charset=utf-8",
+        "Date": "Thu, 11 Aug 2016 10:14:58 GMT",
+        "Etag": "\"7c833b5f378a061b3f71aae8c09b277c\"",
+        "Server": "am/2",
+        "Status": "200 OK",
+        "Vary": "Authorization, Accept",
+        "Content-Length": "1038"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

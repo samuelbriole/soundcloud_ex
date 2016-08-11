@@ -34,7 +34,6 @@ defmodule SoundcloudEx do
   end
 
   def add_params_to_url(url, params \\ %{}) do
-    IO.puts encode_params(params)
     <<url :: binary, "&", encode_params(params) :: binary>>
   end
 

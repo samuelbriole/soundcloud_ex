@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.soundcloud.com/me?oauth_token=MY_AUTH_TOKEN&"
+    },
+    "response": {
+      "body": "{\"id\":3867012,\"kind\":\"user\",\"permalink\":\"gregoriosetti\",\"username\":\"desmondhume\",\"last_modified\":\"2016/08/11 10:10:13 +0000\",\"uri\":\"https://api.soundcloud.com/users/3867012\",\"permalink_url\":\"http://soundcloud.com/gregoriosetti\",\"avatar_url\":\"https://i1.sndcdn.com/avatars-000151488862-sgfujj-large.jpg\",\"country\":\"Italy\",\"first_name\":\"Gregorio\",\"last_name\":\"Setti\",\"full_name\":\"Gregorio Setti\",\"description\":null,\"city\":\"Milan\",\"discogs_name\":null,\"myspace_name\":null,\"website\":null,\"website_title\":null,\"online\":false,\"track_count\":0,\"playlist_count\":0,\"plan\":\"Free\",\"public_favorites_count\":1,\"subscriptions\":[],\"upload_seconds_left\":10800,\"quota\":{\"unlimited_upload_quota\":false,\"upload_seconds_used\":0,\"upload_seconds_left\":10800},\"private_tracks_count\":0,\"private_playlists_count\":0,\"primary_email_confirmed\":true,\"locale\":\"\",\"followers_count\":2,\"followings_count\":6}",
+      "headers": {
+        "Access-Control-Allow-Headers": "Accept, Authorization, Content-Type, Origin",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Date",
+        "Cache-Control": "private, max-age=0, must-revalidate",
+        "Content-Type": "application/xml; charset=utf-8",
+        "Date": "Thu, 11 Aug 2016 10:11:39 GMT",
+        "Etag": "\"45ef768f8405684dc7b17ea53e2b7ff1\"",
+        "Server": "am/2",
+        "Status": "200 OK",
+        "Content-Length": "872"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.soundcloud.com/me/followings/2976616?oauth_token=MY_AUTH_TOKEN"
+    },
+    "response": {
+      "body": "{\"status\":\"Status(200) - OK\"}",
+      "headers": {
+        "Access-Control-Allow-Headers": "Accept, Authorization, Content-Type, Origin",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Date",
+        "Cache-Control": "private, max-age=0, must-revalidate",
+        "Content-Type": "application/json",
+        "Date": "Thu, 11 Aug 2016 10:18:33 GMT",
+        "Server": "am/2",
+        "Content-Length": "29"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
