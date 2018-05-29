@@ -1,6 +1,4 @@
 defmodule SoundcloudEx.Track do
-  import SoundcloudEx
-
   defstruct [
     :id,
     :created_at,
@@ -61,7 +59,13 @@ defmodule SoundcloudEx.Track do
   # types            enumeration  a comma separated list of types
 
   def search(filters, client) do
-    get("/tracks", client, filters)
+    SoundcloudEx.get("/tracks", client, filters)
     |> Poison.decode!(as: [%__MODULE__{}])
+  end
+
+  # gets a single track
+  def get(id, client) do
+    SoundcloudEx.get("/tracks/" <> id, client)
+    |> Poison.decode!(as: %__MODULE__{})
   end
 end
