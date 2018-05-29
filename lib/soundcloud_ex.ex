@@ -74,7 +74,7 @@ defmodule SoundcloudEx do
   def parse_response(%HTTPoison.Response{status_code: 200, body: body}), do: body
   def parse_response(%HTTPoison.Response{status_code: 201, body: body}), do: body
   def parse_response(%HTTPoison.Response{status_code: 303, body: body}), do: body
-  def parse_response(%HTTPoison.Response{status_code: 404, body: body}), do: raise SoundcloudEx.NotFoundError
+  def parse_response(%HTTPoison.Response{status_code: 404, body: ""}), do: raise SoundcloudEx.NotFoundError
   def parse_response(%HTTPoison.Response{status_code: status_code, body: ""}), do: { status_code, nil }
   def parse_response(%HTTPoison.Response{status_code: status_code, body: body }), do: { status_code, body }
 end

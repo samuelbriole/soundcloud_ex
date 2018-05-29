@@ -1,6 +1,4 @@
 defmodule SoundcloudEx.PaginatedList do
-  import SoundcloudEx
-
   defstruct [
     :collection,
     :next_href,
