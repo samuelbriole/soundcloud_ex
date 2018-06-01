@@ -69,8 +69,8 @@ defmodule SoundcloudEx.Track do
     |> Poison.decode!(as: %__MODULE__{})
   end
 
-  def related(id, client) do
-    SoundcloudEx.get("/tracks/" <> to_string(id) <> "/related", client)
+  def related(id, filters, client) do
+    SoundcloudEx.get("/tracks/" <> to_string(id) <> "/related", client, filters)
     |> Poison.decode!(as: [%__MODULE__{}])
   end
 end
